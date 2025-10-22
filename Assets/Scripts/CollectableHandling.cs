@@ -1,18 +1,19 @@
 using UnityEngine;
-
-all cluusing UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class CollectableHandling : MonoBehaviour
 {
     // set up for scoring system
-    int playerScore = 0;
-
+    public int playerScore = 0; // 0 initial score
+    public UI_ScoreUpdater scoreUpdater; // gives the player access to the script 
+    public int collectCount = 0; // sets up the collectCount before unity can read the true count in start()
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        collectCount = GameObject.FindGameObjectsWithTag("PickUp").Length;
+        scoreUpdater.ScoreUI_Update(playerScore, collectCount); // calls the UI_ScoreText to give initial 0 score
     }
 
     // Update is called once per frame
@@ -29,7 +30,7 @@ public class CollectableHandling : MonoBehaviour
         {
             other.gameObject.SetActive(false);
             playerScore++;
+            scoreUpdater.ScoreUI_Update(playerScore, collectCount); // calls the UI_ScoreText to update the score
         }
-        
     }
 }
