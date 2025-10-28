@@ -14,4 +14,9 @@ public class UI_ScoreUpdater : MonoBehaviour
         score.SetText(playerScore + " / " + requiredScore);
     }
 
+    public void ScoreUI_TestText(string input)
+    {
+        score.SetText(input);
+    }
+
 }
