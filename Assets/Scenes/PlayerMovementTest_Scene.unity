@@ -385,6 +385,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3220867867483855997, guid: 3dabcd86051027d48832db9f847a9c1c, type: 3}
+      propertyPath: m_Constraints
+      value: 80
+      objectReference: {fileID: 0}
     - target: {fileID: 6325369901240880504, guid: 3dabcd86051027d48832db9f847a9c1c, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -463,7 +467,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 15
-  birdHopHeight: 0
+  birdHopHeight: 500
+  gravityMod: 0.5
+  onPlatform: 1
 --- !u!1 &1048811410
 GameObject:
   m_ObjectHideFlags: 0
