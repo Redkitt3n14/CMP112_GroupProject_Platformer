@@ -17,7 +17,7 @@ public class CollectableAnim : MonoBehaviour
     void Update()
     {
         transform.Rotate(new Vector3(0, rotateSpeed, 0) * Time.deltaTime);
-        scoreUpdater.ScoreUI_TestText(Mathf.Sin(time*timeMult).ToString()); // testing sine functions for animation
+        //scoreUpdater.ScoreUI_TestText(Mathf.Sin(time*timeMult).ToString()); // testing sine functions for animation
         transform.position += new Vector3(0, (Mathf.Sin(time*timeMult) * sineMult), 0);
 
         time += Time.deltaTime; // not great practice because of float imprecision but its just for anim so should be fine
