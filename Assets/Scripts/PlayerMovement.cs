@@ -1,11 +1,13 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Rendering;
 
 public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody rb;
     public float speed = 0;
     public float birdHopHeight = 0;
+    public float jumpForce;
     public float gravityMod = 0;
     public bool onPlatform = true;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -15,20 +17,37 @@ public class PlayerMovement : MonoBehaviour
         Physics.gravity *= gravityMod;
     }
 
+    // does not work properly must fix
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space) && onPlatform) 
+        {
+            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            onPlatform = false;
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        onPlatform = true;
+    }
 
 
     // Update is called on once per fixed frame-rate frame
     void FixedUpdate()
     {
-        float moveHorizontal = Input.GetAxis("Horizontal");
-        float moveVertical = Input.GetAxis("Vertical");
-        float jump = Input.GetAxis("Jump");
+        float moveHorizontal = Input.GetAxisRaw("Horizontal");
+        float moveVertical = Input.GetAxisRaw("Vertical");
 
-        Vector3 moveVector = new Vector3(moveHorizontal, 0.0f, moveVertical);
-        rb.AddForce(moveVector * speed);
-        float angle = Mathf.Atan2(moveVertical, moveHorizontal) * Mathf.Rad2Deg;
-        Vector3 rotation = new Vector3(0, angle, 0);
-        transform.eulerAngles = rotation;
+
+        Vector3 moveVector = new Vector3(moveHorizontal, 0.0f, moveVertical).normalized;
+        rb.linearVelocity = (moveVector * speed);
+
+
+        //float jump = Input.GetAxisRaw()
+        //float angle = Mathf.Atan2(moveVertical, moveHorizontal) * Mathf.Rad2Deg;
+        //Vector3 rotation = new Vector3(0, angle, 0);
+        //transform.eulerAngles = rotation;
 
         
     }
