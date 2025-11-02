@@ -1,37 +1,25 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.Rendering;
+
 
 public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody rb;
     public float speed = 0;
-    public float birdHopHeight = 0;
-    public float jumpForce;
-    public float gravityMod = 0;
-    public bool onPlatform = true;
+  
+
+  
+    
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        Physics.gravity *= gravityMod;
+        
     }
 
     // does not work properly must fix
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space) && onPlatform) 
-        {
-            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-            onPlatform = false;
-        }
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        onPlatform = true;
-    }
-
+   
 
     // Update is called on once per fixed frame-rate frame
     void FixedUpdate()
@@ -41,17 +29,30 @@ public class PlayerMovement : MonoBehaviour
 
 
         Vector3 moveVector = new Vector3(moveHorizontal, 0.0f, moveVertical).normalized;
-        rb.linearVelocity = (moveVector * speed);
 
+        rb.AddForce(moveVector * speed);
+        
+       // rb.linearVelocity = (moveVector * speed);
 
-        //float jump = Input.GetAxisRaw()
-        //float angle = Mathf.Atan2(moveVertical, moveHorizontal) * Mathf.Rad2Deg;
-        //Vector3 rotation = new Vector3(0, angle, 0);
-        //transform.eulerAngles = rotation;
 
         
-    }
+        float angle = Mathf.Atan2(moveVertical, moveHorizontal) * Mathf.Rad2Deg;
+        
 
+
+            // ensure the direction the mesh is facing is the direction the player is going  
+
+        Vector3 rotation = new Vector3(0, angle, 0);
+        //transform.eulerAngles = rotation;
+        
+        
+
+        
+    } 
+
+   
+
+    /*
     void OnMove(InputValue movementValue, Collision collision)
     {
         // check the player is on the ground
@@ -67,5 +68,6 @@ public class PlayerMovement : MonoBehaviour
        
 
     }
+    */
 
 }
