@@ -173,6 +173,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 50
+  touchingPlatform: 1
+  birdHopHeight: 5
 --- !u!114 &5928003984434000396
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -189,3 +191,5 @@ MonoBehaviour:
   jumpForce: 15
   gravityMod: 4
   onPlatform: 1
+  coyoteTime: 0.2
+  inputBuffer: 0.2

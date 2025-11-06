@@ -6,11 +6,11 @@ public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody rb;
     public float speed = 0;
-  
+    public bool touchingPlatform = true;
+    public float birdHopHeight = 0;
 
-  
-    
-    
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -31,7 +31,19 @@ public class PlayerMovement : MonoBehaviour
         Vector3 moveVector = new Vector3(moveHorizontal, 0.0f, moveVertical).normalized;
 
         rb.AddForce(moveVector * speed);
+
+        // currently hops even when the player stops inputting things - fix this
+        if ((Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D)) && touchingPlatform)
+       {
+            // when moving and on the ground get player to bird hop(currently doesn't work)
+           
+            rb.AddForce(Vector3.up * birdHopHeight, ForceMode.Impulse);
+            
+            touchingPlatform = false;
+            
         
+        }
+       
        // rb.linearVelocity = (moveVector * speed);
 
 
@@ -50,24 +62,13 @@ public class PlayerMovement : MonoBehaviour
         
     } 
 
-   
 
-    /*
-    void OnMove(InputValue movementValue, Collision collision)
+
+
+    private void OnCollisionEnter(Collision collision)
     {
-        // check the player is on the ground
-       if (onPlatform == true)
-       {
-            // when moving and on the ground get player to bird hop(currently doesn't work)
-            Vector3 birdHop = new Vector3(0.0f, birdHopHeight, 0.0f);
-
-            rb.AddForce(birdHop * birdHopHeight, ForceMode.Impulse);
-            onPlatform = false;
-        
-       }
-       
-
+        touchingPlatform = true;
     }
-    */
+    
 
 }
