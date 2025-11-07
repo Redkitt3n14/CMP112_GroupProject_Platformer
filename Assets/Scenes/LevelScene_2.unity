@@ -265,6 +265,10 @@ PrefabInstance:
       value: EndGoal
       objectReference: {fileID: 0}
     - target: {fileID: 6032892570405245881, guid: 60232158186b6d0459bc7039801dd8ca, type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6032892570405245881, guid: 60232158186b6d0459bc7039801dd8ca, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 327613550ebd6b44cb8f2c530a3b256a, type: 2}
@@ -1231,6 +1235,10 @@ PrefabInstance:
       propertyPath: scoreUpdater
       value: 
       objectReference: {fileID: 670690180}
+    - target: {fileID: 2976751604020217479, guid: 3dabcd86051027d48832db9f847a9c1c, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 4349246775995668423, guid: 3dabcd86051027d48832db9f847a9c1c, type: 3}
       propertyPath: m_Mesh
       value: 

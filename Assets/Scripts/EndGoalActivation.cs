@@ -6,18 +6,25 @@ using UnityEngine.SceneManagement;
 public class EndGoalActivation : MonoBehaviour
 {
     // set up the hook to put next level into
-    //public UI_ScoreUpdater scoreUpdater;
+    public Material materialInactive;
+    public Material materialActive;
 
+    public string nextScene;
     public bool goalActive = false;
 
     public void ActivateGoal()
     {
-        Destroy(gameObject);
-        // set self to be a trigger
-        // change material to the opaque version
+        //Destroy(gameObject); // testing effect
+        goalActive = true; // allows the collision to take place
+        GetComponent<MeshRenderer>().material = materialActive;
+
     }
-    public void ChangeScene()
+    void OnCollisionEnter(Collision other) // borrowed this line of code from imogen's falling platform code
     {
-        SceneManager.LoadScene("LevelScene_2");
+        if (goalActive == true && other.gameObject.CompareTag("Player"))
+        {
+            SceneManager.LoadScene(nextScene);
+                    
+        }
     }
 }

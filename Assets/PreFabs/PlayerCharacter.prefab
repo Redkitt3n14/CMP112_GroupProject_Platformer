@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 5928003984434000396}
   m_Layer: 0
   m_Name: PlayerCharacter
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -189,3 +189,5 @@ MonoBehaviour:
   jumpForce: 15
   gravityMod: 4
   onPlatform: 1
+  coyoteTime: 0.2
+  inputBuffer: 0.2
