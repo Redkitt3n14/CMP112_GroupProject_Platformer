@@ -8,7 +8,7 @@ public class PlayerJump : MonoBehaviour
     public float birdHopHeight = 0;
 
     public float jumpForce = 0;
-    public float gravityMod = 0;
+  
     public bool onPlatform = true;
     public float coyoteTime = 0.2f;
     private float coyoteTimer;
@@ -20,7 +20,7 @@ public class PlayerJump : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        Physics.gravity *= gravityMod; 
+         
     }
 
     // Update is called once per frame
@@ -72,20 +72,3 @@ public class PlayerJump : MonoBehaviour
     }
 }
 
-// jump code before coyote time and input buffer
-
-/*void Start()
-{
-    rb = GetComponent<Rigidbody>();
-    Physics.gravity *= gravityMod;
-}
-
-// Update is called once per frame
-void Update()
-{
-    if (Input.GetKeyDown(KeyCode.Space) && onPlatform)
-    {
-        rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-        onPlatform = false;
-    }
-}*/

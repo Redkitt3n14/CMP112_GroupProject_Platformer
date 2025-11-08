@@ -32,19 +32,7 @@ public class PlayerMovement : MonoBehaviour
 
         rb.AddForce(moveVector * speed);
 
-        // currently hops even when the player stops inputting things - fix this
-        if ((Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D)) && touchingPlatform)
-       {
-            // when moving and on the ground get player to bird hop(currently doesn't work)
-           
-            rb.AddForce(Vector3.up * birdHopHeight, ForceMode.Impulse);
-            
-            touchingPlatform = false;
-            
-        
-        }
        
-       // rb.linearVelocity = (moveVector * speed);
 
 
         
@@ -54,8 +42,8 @@ public class PlayerMovement : MonoBehaviour
 
             // ensure the direction the mesh is facing is the direction the player is going  
 
-        Vector3 rotation = new Vector3(0, angle, 0);
-        //transform.eulerAngles = rotation;
+        Vector3 rotation = new Vector3(0, (90-angle), 0); // Direction solution fixed by Ashleigh
+        transform.eulerAngles = rotation;
         
         
 
@@ -69,6 +57,8 @@ public class PlayerMovement : MonoBehaviour
     {
         touchingPlatform = true;
     }
-    
+     
+       
+       // rb.linearVelocity = (moveVector * speed);
 
 }
