@@ -36,14 +36,14 @@ public class FallingPlatform : MonoBehaviour
 
         {
             // delays the function code by 0.3 seconds
-            Invoke("drop", 0.3f);
+            Invoke("drop", 0.7f);
 
         }
 
         if (collision.gameObject.CompareTag("TheVoid"))
         {
             //respawns the falling platform after 0.7 seconds
-            Invoke("respawn", 0.7f);
+            Invoke("respawn", 1f);
             
         }
     }
