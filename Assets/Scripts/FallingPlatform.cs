@@ -13,9 +13,11 @@ public class FallingPlatform : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         // disables the rigidbody physics
         rb.isKinematic = true;
-        //xPosition = position.x;
-       // yPosition = position.y;
-      //  zPosition = position.z;
+
+        // gets the initial position of the falling platform
+        xPosition = transform.position.x;
+        yPosition = transform.position.y;
+        zPosition = transform.position.z;
         
     }
 
@@ -25,36 +27,38 @@ public class FallingPlatform : MonoBehaviour
         
     }
 
-    //enables the rigidbody physics after the player collides with the platform
+    
     void OnCollisionEnter(Collision collision)
     {
+        
         
         if (collision.gameObject.CompareTag("Player"))
 
         {
-            
+            // delays the function code by 0.3 seconds
             Invoke("drop", 0.3f);
 
         }
 
         if (collision.gameObject.CompareTag("TheVoid"))
         {
-            //Invoke("respawn", 0.3f);
-            Destroy(gameObject);
-
+            //respawns the falling platform after 0.7 seconds
+            Invoke("respawn", 0.7f);
+            
         }
     }
     void drop()
     {
-
+        // enables the rigidbody physics
         rb.isKinematic = false;
 
     }
 
     void respawn()
     {
-
-        //transform.position = new Vector3(xPosition, yPosition, zPosition);
-        //rb.isKinematic = true;    
+        //sets the falling platform back to its initial position
+        transform.position = new Vector3(xPosition, yPosition, zPosition);
+        // once again disables the rigidbody physics
+        rb.isKinematic = true;    
     }
 }
