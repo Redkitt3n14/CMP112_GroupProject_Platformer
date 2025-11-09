@@ -36,29 +36,37 @@ public class PlayerMovement : MonoBehaviour
 
        
 
-        // get mesh direction from the player input
+        // get direction facing from the player input
         
         float angle = Mathf.Atan2(moveVertical, moveHorizontal) * Mathf.Rad2Deg;
         
 
 
-            // ensure the direction the mesh is facing is the direction the player is going  
+        // ensure the direction the mesh is facing is the direction the player is going  
 
         Vector3 rotation = new Vector3(0, (90-angle), 0); // Direction solution fixed by Ashleigh
         transform.eulerAngles = rotation;
-        
-        
-        
-        
 
-        
-    } 
 
+        if (touchingPlatform && (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D)))
+        {
+            rb.AddForce(Vector3.up * birdHopHeight, ForceMode.Impulse);
+
+            touchingPlatform = false;
+        }
+
+
+
+    }
+
+   
 
 
 // set touchingPlatform to true after hitting the ground to reset bird jump
     private void OnCollisionEnter(Collision collision)
     {
+        
+        
         touchingPlatform = true;
     }
      
