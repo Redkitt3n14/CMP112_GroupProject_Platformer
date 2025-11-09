@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
     public float speed = 0;
     public bool touchingPlatform = true;
     public float birdHopHeight = 0;
-
+    
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -18,12 +18,14 @@ public class PlayerMovement : MonoBehaviour
         
     }
 
-    // does not work properly must fix
+    
    
 
     // Update is called on once per fixed frame-rate frame
     void FixedUpdate()
     {
+        
+        // get the player input for the characters walking and use it to move the player character
         float moveHorizontal = Input.GetAxisRaw("Horizontal");
         float moveVertical = Input.GetAxisRaw("Vertical");
 
@@ -34,7 +36,7 @@ public class PlayerMovement : MonoBehaviour
 
        
 
-
+        // get mesh direction from the player input
         
         float angle = Mathf.Atan2(moveVertical, moveHorizontal) * Mathf.Rad2Deg;
         
@@ -46,19 +48,21 @@ public class PlayerMovement : MonoBehaviour
         transform.eulerAngles = rotation;
         
         
+        
+        
 
         
     } 
 
 
 
-
+// set touchingPlatform to true after hitting the ground to reset bird jump
     private void OnCollisionEnter(Collision collision)
     {
         touchingPlatform = true;
     }
      
        
-       // rb.linearVelocity = (moveVector * speed);
+      
 
 }

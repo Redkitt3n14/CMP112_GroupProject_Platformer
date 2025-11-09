@@ -5,7 +5,7 @@ public class PlayerJump : MonoBehaviour
 
     private Rigidbody rb;
     
-    public float birdHopHeight = 0;
+    
 
     public float jumpForce = 0;
   
@@ -26,11 +26,11 @@ public class PlayerJump : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        // reset timer when on the ground
 
         if (onPlatform == true) 
         {
-            // reset timer when on the ground
+            
             coyoteTimer = coyoteTime;
 
         }
@@ -39,6 +39,7 @@ public class PlayerJump : MonoBehaviour
             coyoteTimer -= Time.deltaTime;
 
         }
+
 
         if(Input.GetKeyDown(KeyCode.Space))
         {
@@ -63,9 +64,9 @@ public class PlayerJump : MonoBehaviour
     }
 
 
-    
 
 
+    // set touchingPlatform to true after hitting the ground to reset jump
     private void OnCollisionEnter(Collision collision)
     {
         onPlatform = true;
