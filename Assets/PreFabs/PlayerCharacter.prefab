@@ -176,6 +176,7 @@ MonoBehaviour:
   speed: 50
   touchingPlatform: 1
   birdHopHeight: 7
+  controlRealignment: 0
 --- !u!114 &5928003984434000396
 MonoBehaviour:
   m_ObjectHideFlags: 0
