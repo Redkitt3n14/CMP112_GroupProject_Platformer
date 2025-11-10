@@ -32,6 +32,9 @@ public class PlayerMovement : MonoBehaviour
 
         Vector3 moveVector = new Vector3(moveHorizontal, 0.0f, moveVertical).normalized;
 
+        // rotates the vector by 45 degrees to align with camera angle - Ashleigh
+        moveVector = Quaternion.Euler(0, -45, 0) * moveVector;
+
         rb.AddForce(moveVector * speed);
 
 
@@ -44,7 +47,7 @@ public class PlayerMovement : MonoBehaviour
 
 
             // ensure the direction the mesh is facing is the direction the player is going  
-            Vector3 rotation = new Vector3(0, (90 - angle), 0); // Direction solution fixed by Ashleigh
+            Vector3 rotation = new Vector3(0, (45 - angle), 0); // Direction solution fixed by Ashleigh - altered angle from 90 to 45 to align with camera
             transform.eulerAngles = rotation;
         }
 
