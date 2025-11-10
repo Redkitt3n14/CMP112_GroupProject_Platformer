@@ -5,8 +5,6 @@ public class PlayerJump : MonoBehaviour
 
     private Rigidbody rb;
     
-    
-
     public float jumpForce = 0;
   
     public bool onPlatform = true;
@@ -26,6 +24,9 @@ public class PlayerJump : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+        // coyote time to allow player to jump up to 0.2 seconds after they leave the ground
+        
         // reset timer when on the ground
 
         if (onPlatform == true) 
@@ -41,6 +42,7 @@ public class PlayerJump : MonoBehaviour
         }
 
 
+        // input buffering to allow the player to jump again immediately after touching the ground
         if(Input.GetKeyDown(KeyCode.Space))
         {
             inputTimer = inputBuffer;
@@ -53,16 +55,16 @@ public class PlayerJump : MonoBehaviour
 
 
 
-
+        
         if (inputTimer > 0 && coyoteTimer > 0)
         {
+            // jump
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             coyoteTimer = 0;
             onPlatform = false;
         }
 
     }
-
 
 
 

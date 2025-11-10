@@ -175,7 +175,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 50
   touchingPlatform: 1
-  birdHopHeight: 5
+  birdHopHeight: 7
 --- !u!114 &5928003984434000396
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -200,7 +200,7 @@ ConstantForce:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6836658459721349250}
   m_Enabled: 1
-  m_Force: {x: 0, y: -24, z: 0}
+  m_Force: {x: 0, y: -34, z: 0}
   m_RelativeForce: {x: 0, y: 0, z: 0}
   m_Torque: {x: 0, y: 0, z: 0}
   m_RelativeTorque: {x: 0, y: 0, z: 0}
