@@ -268,6 +268,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 327613550ebd6b44cb8f2c530a3b256a, type: 2}
+    - target: {fileID: 8673586578032543970, guid: 60232158186b6d0459bc7039801dd8ca, type: 3}
+      propertyPath: nextScene
+      value: LevelScene_temp
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -448,7 +452,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8673586578032543970, guid: 60232158186b6d0459bc7039801dd8ca, type: 3}
       propertyPath: nextScene
-      value: LevelScene_2
+      value: LevelScene_temp
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -748,7 +752,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 327613550ebd6b44cb8f2c530a3b256a, type: 2}
     - target: {fileID: 8673586578032543970, guid: 60232158186b6d0459bc7039801dd8ca, type: 3}
       propertyPath: nextScene
-      value: LevelScene_2
+      value: LevelScene_temp
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
