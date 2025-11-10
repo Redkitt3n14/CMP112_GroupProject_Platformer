@@ -20,13 +20,8 @@ public class PlayerJump : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        
         Physics.gravity *= gravityMod;
 
-        // debug log to show current gravity force
-        Debug.Log(Physics.gravity[0]);
-        Debug.Log(Physics.gravity[1]);
-        Debug.Log(Physics.gravity[2]);
     }
 
     // Update is called once per frame
