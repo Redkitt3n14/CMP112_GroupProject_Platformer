@@ -1131,6 +1131,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameHandler
       objectReference: {fileID: 0}
+    - target: {fileID: 6672674578148344745, guid: 371e12ecebb4e074e8f08f4df919407c, type: 3}
+      propertyPath: displayText
+      value: LEVEL 4 - More Apple Gathering
+      objectReference: {fileID: 0}
     - target: {fileID: 8763351860607302520, guid: 371e12ecebb4e074e8f08f4df919407c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
