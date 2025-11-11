@@ -9,8 +9,29 @@ EditorBuildSettings:
     path: Assets/Scenes/CollectableTest_Scene 1.unity
     guid: 9369747bab6a3a045ba0425170e550f7
   - enabled: 1
-    path: Assets/Scenes/LevelScene_2.unity
+    path: Assets/Scenes/LevelScene_temp.unity
     guid: 34a5c71375e86c94f8b943d14768639b
+  - enabled: 1
+    path: Assets/Scenes/ActualLevels/LevelScene1.unity
+    guid: e739181cb7af0ea439127c56b974639e
+  - enabled: 1
+    path: Assets/Scenes/ActualLevels/LevelScene2.unity
+    guid: 2a743bf6b4c76f04496866ff3279266f
+  - enabled: 1
+    path: Assets/Scenes/ActualLevels/LevelScene3.unity
+    guid: 255e0125cb17362478dd4043c8457d74
+  - enabled: 1
+    path: Assets/Scenes/ActualLevels/LevelScene4.unity
+    guid: 06429bfe70cd7d64f9c5b1beb4225d1a
+  - enabled: 1
+    path: Assets/Scenes/ActualLevels/LevelScene6.unity
+    guid: 9826b08bd54d96e41a54b2a6f8a16586
+  - enabled: 1
+    path: Assets/Scenes/ActualLevels/LevelScene8.unity
+    guid: dbcb6b99978252e4183ac4e4240c8e22
+  - enabled: 1
+    path: Assets/Scenes/ActualLevels/LevelScene10.unity
+    guid: ae99440da98faaa49896b05459bcd57a
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
