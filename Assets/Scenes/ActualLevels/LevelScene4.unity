@@ -1034,7 +1034,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 327613550ebd6b44cb8f2c530a3b256a, type: 2}
     - target: {fileID: 8673586578032543970, guid: 60232158186b6d0459bc7039801dd8ca, type: 3}
       propertyPath: nextScene
-      value: LevelScene6
+      value: LevelScene10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2023,7 +2023,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 327613550ebd6b44cb8f2c530a3b256a, type: 2}
     - target: {fileID: 8673586578032543970, guid: 60232158186b6d0459bc7039801dd8ca, type: 3}
       propertyPath: nextScene
-      value: LevelScene5
+      value: LevelScene9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
