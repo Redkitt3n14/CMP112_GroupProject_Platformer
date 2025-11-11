@@ -253,7 +253,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1968640124}
   m_LocalEulerAnglesHint: {x: 50, y: -50, z: 0}
 --- !u!114 &410087042
 MonoBehaviour:
@@ -597,6 +597,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameHandler
       objectReference: {fileID: 0}
+    - target: {fileID: 6672674578148344745, guid: 371e12ecebb4e074e8f08f4df919407c, type: 3}
+      propertyPath: displayText
+      value: LEVEL 1 - Touch The Obelisk
+      objectReference: {fileID: 0}
+    - target: {fileID: 6672674578148344745, guid: 371e12ecebb4e074e8f08f4df919407c, type: 3}
+      propertyPath: displayTime
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8763351860607302520, guid: 371e12ecebb4e074e8f08f4df919407c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -684,12 +692,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 832575517}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1968640124}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &861657412 stripped
 GameObject:
@@ -877,7 +885,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 327613550ebd6b44cb8f2c530a3b256a, type: 2}
     - target: {fileID: 8673586578032543970, guid: 60232158186b6d0459bc7039801dd8ca, type: 3}
       propertyPath: nextScene
-      value: LevelScene_2
+      value: LevelScene2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -956,11 +964,45 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1858478217}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
+  m_Father: {fileID: 1968640124}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1968640123
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1968640124}
+  m_Layer: 0
+  m_Name: UnityBasics
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1968640124
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1968640123}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 410087041}
+  - {fileID: 832575519}
+  - {fileID: 1858478220}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &7067761830882851750
@@ -1049,11 +1091,9 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 246156987}
-  - {fileID: 410087041}
-  - {fileID: 832575519}
+  - {fileID: 1968640124}
   - {fileID: 709104443}
   - {fileID: 610237047}
-  - {fileID: 1858478220}
   - {fileID: 1211012096}
   - {fileID: 7067761830882851750}
   - {fileID: 734794265}

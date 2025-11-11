@@ -177,5 +177,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   materialInactive: {fileID: 2100000, guid: 327613550ebd6b44cb8f2c530a3b256a, type: 2}
   materialActive: {fileID: 2100000, guid: acdeea657a7686246821972a6022a8bc, type: 2}
-  nextScene: LevelScene_
+  nextScene: LevelScene
   goalActive: 0
