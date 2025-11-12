@@ -18,6 +18,13 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            controlRealignment = !controlRealignment; // flips control style when P is pressed
+        }
+    }
 
 
 
